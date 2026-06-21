@@ -1,7 +1,7 @@
 # proyecto hola.py
 # Sistema de Acceso Interactivo - Club de Fuerza 🏋️‍♂️
 
-Un programa de consola (CLI) desarrollado en Python para gestionar el registro y acceso de usuarios a un club deportivo. Este sistema está diseñado con un fuerte enfoque en la **Experiencia de Usuario (UX)**, la validación estricta de datos y la persistencia de información.
+Un programa de consola (CLI) desarrollado en Python para gestionar el registro y acceso de usuarios a un club deportivo. Este sistema está diseñado con una fuerte validación estricta de datos y la persistencia de información.
 
 ## 📌 Características Principales
 
