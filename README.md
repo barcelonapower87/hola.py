@@ -19,7 +19,7 @@ Un programa de consola (CLI) desarrollado en Python para gestionar el registro y
 ## 🚀 Instrucciones de Ejecución
 
 1. Asegúrate de tener Python instalado en tu computadora o en tu entorno de desarrollo.
-2. Descarga o clona el archivo principal del script (por ejemplo, `registro_club.py`).
+2. Descarga o clona el archivo principal del script (por ejemplo, `hola.py`).
 3. Abre tu terminal o línea de comandos.
 4. Navega hasta la carpeta donde guardaste el archivo.
 5. Ejecuta el siguiente comando:
