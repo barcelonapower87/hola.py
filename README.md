@@ -5,7 +5,7 @@ Un programa de consola (CLI) desarrollado en Python para gestionar el registro y
 
 ## 📌 Características Principales
 
-* **Persistencia de Datos (Nuevo):** Los registros exitosos se guardan automáticamente en un archivo local (`registros_club.txt`), asegurando que la información no se pierda al cerrar el programa y sirviendo como una base de datos real.
+* **Persistencia de Datos (Nuevo):** Los registros exitosos se guardan automáticamente en un archivo local (`hola.txt`), asegurando que la información no se pierda al cerrar el programa y sirviendo como una base de datos real.
 * **Validación Estricta de Entradas (Nuevo):** * El sistema verifica que el nombre de usuario contenga exclusivamente letras y espacios (rechazando números, símbolos o campos vacíos).
   * La edad está protegida contra errores de tipografía (manejo de excepciones `ValueError`).
 * **Transparencia Activa:** El programa le explica al usuario el *por qué* de cada solicitud de datos antes de pedirla, generando confianza y evitando confusiones.
