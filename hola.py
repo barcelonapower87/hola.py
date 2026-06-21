@@ -6,7 +6,7 @@ def guardar_registro(nombre, edad, es_vip):
     
     # La "a" significa "append" (agregar). Si el archivo no existe, lo crea.
     # Si ya existe, añade la nueva línea al final sin borrar lo anterior.
-    with open("registros_club.txt", "a", encoding="utf-8") as archivo:
+    with open("hola.txt", "a", encoding="utf-8") as archivo:
         archivo.write(f"Nombre: {nombre} | Edad: {edad} | Pase: {tipo_pase}\n")
 
 def sistema_registro_comercial():
