@@ -1,5 +1,5 @@
 #proyecto hola.py 
-# 🚪 Sistema de Control de Acceso al Club
+#  Sistema de Control de Acceso al Club🔞🚪
 
 Una aplicación interactiva y sencilla escrita en Python diseñada para gestionar el acceso de usuarios a un establecimiento, validando de forma automática si cumplen con la mayoría de edad (18 años) requerida.
 
