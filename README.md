@@ -1,4 +1,4 @@
-# proyecto club.py
+# proyecto hola.py
 
 # Sistema de Acceso Interactivo - Club de Fuerza 🏋️‍♂️
 
