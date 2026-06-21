@@ -25,7 +25,7 @@ Un programa de consola (CLI) desarrollado en Python para gestionar el registro y
 5. Ejecuta el siguiente comando:
 
    ```bash
-   python club.py
+   python hola.py
 
 
 
