@@ -1,29 +1,15 @@
-# 1. Definición de variables (Valores de prueba con Juan)
-nombre = "Juan"
-edad = 18
+# 1. Definición de datos (¡Aquí van los inputs!)
+# Pedimos el nombre y la edad al usuario antes de hacer cualquier lógica
+nombre = input("Ingresa tu nombre: ")
+edad = int(input("Ingresa tu edad: ")) # El int() es necesario para que el programa entienda que es un número
 
-# 2. Preparación de datos (Validación y cálculo base)
-limite_edad = 18
-faltan = limite_edad - edad
-
-# 3. Procesamiento (Lógica de decisión con condiciones)
-if edad >= limite_edad:
-    resultado = "¡Bienvenido " + nombre + "! Puedes pasar al club."
-    vip = True
+# 2. Procesamiento (Tu lógica 'if-else' se mantiene igual)
+if edad >= 18:
+    print(f"¡Bienvenido {nombre}! Puedes pasar al club.")
+    # ... (aquí va el resto de tu lógica para la zona VIP)
 else:
-    # Lógica inteligente para definir el plural o singular de los años
-    años_str = "año" if faltan == 1 else "años"
-    resultado = "Lo siento " + nombre + ", eres menor. Vuelve en " + str(faltan) + " " + años_str + "."
-    vip = False
+    print(f"Lo siento {nombre}, eres menor.")
+    # ... (aquí va tu lógica para los años restantes)
 
-# 4. Salida (Presentación de resultados en pantalla)
-print("------------------------------")
-print("PROBANDO CON: " + nombre + " (" + str(edad) + " años)")
-print("------------------------------")
-print(resultado)
-
-if vip:
-    print("Disfruta de la zona VIP.")
-print("------------------------------")
 
 
