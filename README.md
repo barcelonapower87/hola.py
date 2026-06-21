@@ -1,4 +1,4 @@
-# proyecto hola.py
+#proyecto hola.py 
 # 🚪 Sistema de Control de Acceso al Club
 
 Una aplicación interactiva y sencilla escrita en Python diseñada para gestionar el acceso de usuarios a un establecimiento, validando de forma automática si cumplen con la mayoría de edad (18 años) requerida.
@@ -23,23 +23,22 @@ Una aplicación interactiva y sencilla escrita en Python diseñada para gestiona
 2. Abre la terminal o consola de comandos y **entra a la carpeta del proyecto** usando el comando de navegación:
    ```bash
    cd hola.py
-
 Ejemplos de Ejecución
-​Al ejecutar el programa, el sistema te pedirá ingresar los datos. Aquí tienes ejemplos de cómo interactúa 1el usuario con la consola:
+​Al ejecutar el programa, el sistema te pedirá ingresar los datos. Aquí tienes ejemplos de cómo interactúa el usuario con la consola
 
-caso menor de edad
+caso menor de edad:
 
 Ingresa tu nombre: Juan
 Ingresa tu edad: 17
 
 Lo siento Juan, eres menor. Vuelve en 1 año.
 
-caso mayor de edad 
- xź
-Ingresa tu nombre: Carlos
-Ingresa tu edad: 21
+caso mayor de edad:
 
-¡Bienvenido Carlos! Puedes pasar al club.
+Ingresa tu nombre: Juan
+Ingresa tu edad: 18
+
+¡Bienvenido Juan! Puedes pasar al club.
 Disfruta de la zona VIP.
 
 
