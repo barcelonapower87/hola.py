@@ -20,7 +20,7 @@ Un programa de consola (CLI) desarrollado en Python para gestionar el registro y
 ## 🚀 Instrucciones de Ejecución
 
 1. Asegúrate de tener Python instalado en tu equipo.
-2. Guarda el script principal en una carpeta (por ejemplo, `registro_club.py`).
+2. Guarda el script principal en una carpeta (por ejemplo, `hola.py`).
 3. Abre tu terminal o línea de comandos. **Es muy importante que navegues e inicies la terminal exactamente en la misma carpeta donde guardaste el archivo.**
 4. Ejecuta el programa con el siguiente comando:
 
