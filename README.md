@@ -1,35 +1,26 @@
 # proyecto hola.py
-# Sistema de Acceso y Gestión - Club de Fuerza Titán 🏋️‍♂️
+# Sistema de Gestión - Club de Fuerza Titán 🏋️‍♂️
 
-Este proyecto es un **Sistema de Gestión de Usuarios y Herramienta de Entrenamiento** desarrollado en Python. Ha sido construido utilizando **Programación Orientada a Objetos (POO)**, lo que garantiza un código modular, seguro y altamente mantenible.
+Software profesional para la administración de membresías y seguimiento de fuerza física, diseñado con una arquitectura modular orientada a objetos.
 
-## 📌 Características Principales
+## 🚀 Valor Agregado: Experiencia VIP
+El sistema está diseñado para maximizar los ingresos del club mediante la promoción de nuestra **Membresía VIP**:
+- **Acceso Exclusivo:** La membresía VIP desbloquea el acceso a nuestra **Sala Privada**, equipada con máquinas tecnológicas de última generación para un entrenamiento de alto rendimiento.
+- **Venta Persuasiva:** Durante el registro de cada cliente, el software despliega automáticamente la oferta VIP, facilitando la conversión de clientes estándar a usuarios Premium.
 
-* **Arquitectura Orientada a Objetos:** El sistema está encapsulado en la clase `SistemaClub`, eliminando el uso de variables globales y mejorando la seguridad y organización de los datos.
-* **Asistente de Configuración Inicial:** Al ejecutar el programa, el sistema guía al usuario a través de un "Setup Wizard" para configurar su cuenta de **Socio Principal**.
-* **Seguridad Dinámica:** No existen contraseñas predefinidas en el código. La seguridad se basa en la clave que el usuario configura al arrancar el sistema, protegiendo las operaciones críticas.
-* **Gestión de Base de Datos (CRUD Completo):**
-    * **Crear:** Registro de nuevos clientes con ID aleatorio de 5 dígitos y asignación de tipo de pase (VIP/Estándar).
-    * **Leer:** Visualización de registros protegida por la clave del Socio Principal.
-    * **Buscar:** Buscador inteligente por ID para consulta rápida.
-    * **Eliminar:** Función de baja de usuarios con protección de seguridad.
-* **Herramientas de Entrenamiento:**
-    * **Calculadora 1RM:** Herramienta integrada para calcular el peso máximo teórico (repetición máxima) usando la fórmula de Epley.
-* **Persistencia de Datos:** Todos los registros se guardan localmente en `registros_club.txt` para asegurar que la información persista entre sesiones.
+## 📌 Características
+* **Arquitectura Orientada a Objetos (POO):** Código limpio, modular y escalable basado en la clase `SistemaClub`.
+* **Asistente de Configuración:** Al iniciar, el sistema guía al usuario a través de un "Setup Wizard" para configurar su cuenta de **Socio Principal**.
+* **Seguridad Dinámica:** No existen contraseñas predefinidas. La seguridad se basa en la clave que el usuario configura al arrancar el sistema, protegiendo las operaciones críticas (`1`, `4`, `5`).
+* **Gestión de Base de Datos (CRUD):** Registro, búsqueda, visualización y eliminación de socios con validación de seguridad.
+* **Calculadora 1RM:** Herramienta integrada para estimar la fuerza máxima teórica basada en la fórmula de Epley.
+* **Persistencia de Datos:** Almacenamiento local en `registros_club.txt`.
 
 ## 🛠️ Requisitos Técnicos
-
 * **Lenguaje:** Python 3.x
-* **Estructura:** Código modular basado en clases (`class SistemaClub`).
+* **Estructura:** Código modular (`class SistemaClub`).
 * **Librerías:** Utiliza únicamente la librería estándar nativa (`random`), sin dependencias externas.
 
-## 🚀 Instrucciones de Ejecución
-
-1. Asegúrate de tener Python instalado en tu sistema.
-2. Descarga el archivo principal `hola.py`.
-3. Abre tu terminal en la carpeta donde se encuentra el archivo.
-4. Ejecuta el programa con el comando:
-   ```bash
-   python hola.py
+##
 
 
