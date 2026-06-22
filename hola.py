@@ -52,7 +52,7 @@ class SistemaClub:
         if not self.verificar_socio(): return
         print("\n--- BASE DE DATOS ---")
         try:
-            with open("registros_club.txt", "r", encoding="utf-8") as f:
+            with open("hola.txt", "r", encoding="utf-8") as f:
                 print(f.read() if f.read() != "" else "La base de datos está vacía.")
         except: print("⚠️ No hay registros.")
 
