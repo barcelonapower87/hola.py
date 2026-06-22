@@ -43,7 +43,7 @@ class SistemaClub:
     def guardar_registro(self, id_socio, nombre, edad, es_vip, clave):
         tipo = "VIP" if es_vip else "Estándar"
         try:
-            with open("registros_club.txt", "a", encoding="utf-8") as f:
+            with open("hola.txt", "a", encoding="utf-8") as f:
                 f.write(f"ID: #{id_socio} | Nombre: {nombre} | Edad: {edad} | Pase: {tipo} | Clave: {clave}\n")
             print("💾 [Registro guardado]")
         except: print("⚠️ Error al guardar.")
@@ -60,7 +60,7 @@ class SistemaClub:
         print("\n--- BUSCADOR ---")
         id_buscado = input("▶ ID a buscar: ").strip()
         try:
-            with open("registros_club.txt", "r", encoding="utf-8") as f:
+            with open("hola.txt", "r", encoding="utf-8") as f:
                 for linea in f:
                     if f"ID: #{id_buscado}" in linea:
                         print(f"✅ {linea.strip()}")
@@ -72,9 +72,9 @@ class SistemaClub:
         if not self.verificar_socio(): return
         id_borrar = input("▶ ID a eliminar: ").strip()
         try:
-            with open("registros_club.txt", "r", encoding="utf-8") as f:
+            with open("hola.txt", "r", encoding="utf-8") as f:
                 lineas = f.readlines()
-            with open("registros_club.txt", "w", encoding="utf-8") as f:
+            with open("hola.txt", "w", encoding="utf-8") as f:
                 borrado = False
                 for linea in lineas:
                     if f"ID: #{id_borrar}" not in linea: f.write(linea)
