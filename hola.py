@@ -60,7 +60,7 @@ class SistemaClub:
         print("\n--- BUSCADOR DE SOCIOS ---")
         id_buscado = input("▶ ID a buscar: ").strip()
         try:
-            with open("registros_club.txt", "r", encoding="utf-8") as f:
+            with open("hola.txt", "r", encoding="utf-8") as f:
                 for linea in f:
                     if f"ID: #{id_buscado}" in linea:
                         print(f"✅ {linea.strip()}")
