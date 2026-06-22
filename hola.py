@@ -42,7 +42,7 @@ class SistemaClub:
     def guardar_registro(self, id_socio, nombre, edad, es_vip, clave):
         tipo = "VIP" if es_vip else "Estándar"
         try:
-            with open("registros_club.txt", "a", encoding="utf-8") as f:
+            with open("hola.txt", "a", encoding="utf-8") as f:
                 f.write(f"ID: #{id_socio} | Nombre: {nombre} | Edad: {edad} | Pase: {tipo} | Clave: {clave}\n")
             print("💾 [Registro guardado exitosamente]")
         except: print("⚠️ Error al guardar.")
@@ -51,7 +51,7 @@ class SistemaClub:
         if not self.verificar_socio(): return
         print("\n--- BASE DE DATOS DEL CLUB ---")
         try:
-            with open("registros_club.txt", "r", encoding="utf-8") as f:
+            with open("hola.txt", "r", encoding="utf-8") as f:
                 contenido = f.read()
                 print(contenido if contenido.strip() != "" else "La base de datos está vacía.")
         except: print("⚠️ No hay registros.")
