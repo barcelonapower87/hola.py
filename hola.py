@@ -2,7 +2,6 @@ import random
 
 class SistemaClub:
     def __init__(self):
-        # Aquí inicializamos el estado del sistema dentro del objeto
         self.clave_maestra = ""
         self.nombre_socio_principal = ""
 
@@ -43,24 +42,25 @@ class SistemaClub:
     def guardar_registro(self, id_socio, nombre, edad, es_vip, clave):
         tipo = "VIP" if es_vip else "Estándar"
         try:
-            with open("hola.txt", "a", encoding="utf-8") as f:
+            with open("registros_club.txt", "a", encoding="utf-8") as f:
                 f.write(f"ID: #{id_socio} | Nombre: {nombre} | Edad: {edad} | Pase: {tipo} | Clave: {clave}\n")
-            print("💾 [Registro guardado]")
+            print("💾 [Registro guardado exitosamente]")
         except: print("⚠️ Error al guardar.")
 
     def ver_registros(self):
         if not self.verificar_socio(): return
-        print("\n--- BASE DE DATOS ---")
+        print("\n--- BASE DE DATOS DEL CLUB ---")
         try:
-            with open("hola.txt", "r", encoding="utf-8") as f:
-                print(f.read() if f.read() != "" else "La base de datos está vacía.")
+            with open("registros_club.txt", "r", encoding="utf-8") as f:
+                contenido = f.read()
+                print(contenido if contenido.strip() != "" else "La base de datos está vacía.")
         except: print("⚠️ No hay registros.")
 
     def buscar_cliente(self):
-        print("\n--- BUSCADOR ---")
+        print("\n--- BUSCADOR DE SOCIOS ---")
         id_buscado = input("▶ ID a buscar: ").strip()
         try:
-            with open("hola.txt", "r", encoding="utf-8") as f:
+            with open("registros_club.txt", "r", encoding="utf-8") as f:
                 for linea in f:
                     if f"ID: #{id_buscado}" in linea:
                         print(f"✅ {linea.strip()}")
@@ -70,39 +70,57 @@ class SistemaClub:
 
     def eliminar_cliente(self):
         if not self.verificar_socio(): return
+        print("\n--- DAR DE BAJA A UN CLIENTE ---")
         id_borrar = input("▶ ID a eliminar: ").strip()
         try:
-            with open("hola.txt", "r", encoding="utf-8") as f:
+            with open("registros_club.txt", "r", encoding="utf-8") as f:
                 lineas = f.readlines()
-            with open("hola.txt", "w", encoding="utf-8") as f:
+            with open("registros_club.txt", "w", encoding="utf-8") as f:
                 borrado = False
                 for linea in lineas:
                     if f"ID: #{id_borrar}" not in linea: f.write(linea)
                     else: borrado = True
             print("✅ Cliente eliminado." if borrado else "❌ ID no encontrado.")
-        except: print("⚠️ Error.")
+        except: print("⚠️ Error al procesar.")
 
     # ==========================================================================
-    # 3. HERRAMIENTAS Y REGISTRO
+    # 3. HERRAMIENTAS Y REGISTRO (CON PROMOCIÓN VIP)
     # ==========================================================================
     def registrar_cliente(self):
         if not self.verificar_socio(): return
-        nombre = input("▶ Nombre del cliente: ").strip()
-        edad = int(input("▶ Edad: "))
+        print("\n--- Nuevo Socio ---")
+        nombre = input("▶ Nombre: ").strip()
+        edad = int(input("▶ Edad (mínimo 18): "))
         if edad < 18:
-            print("❌ Acceso denegado: Menor de edad."); return
-        es_vip = input("▶ ¿VIP? (s/n): ").lower() == 's'
+            print("❌ Acceso denegado: Solo mayores de edad."); return
+        
+        # PROMOCIÓN VIP
+        print("\n--- MEJORA TU EXPERIENCIA ---")
+        print("¡Hazte VIP y accede a nuestra SALA PRIVADA!")
+        print("Disfruta de máquinas tecnológicas de última generación.")
+        respuesta_vip = input("▶ ¿Deseas adquirir el Pase VIP por $50? (s/n): ").lower()
+        
+        es_vip = (respuesta_vip == 's')
+        
         id_socio = random.randint(10000, 99999)
         clave = input("▶ Crea clave para el cliente: ").strip()
+        
         self.guardar_registro(id_socio, nombre, edad, es_vip, clave)
-        print(f"✅ Registro exitoso. ID asignado: #{id_socio}")
+        
+        if es_vip:
+            print(f"\n🌟 ¡BIENVENIDO A LA ELITE VIP, {nombre.upper()}!")
+            print("   Disfruta de tu acceso total a la Sala Privada tecnológica.")
+        else:
+            print(f"\n✅ Registro exitoso, {nombre}. Bienvenido al Club.")
+        
+        print(f"   ID asignado: #{id_socio}")
 
     def calculadora_1rm(self):
         print("\n--- CALCULADORA 1RM ---")
         try:
-            p = float(input("▶ Peso: "))
-            r = int(input("▶ Reps: "))
-            print(f"💪 Tu 1RM estimado: {p * (1 + (0.0333 * r)):.2f}")
+            p = float(input("▶ Peso levantado: "))
+            r = int(input("▶ Repeticiones: "))
+            print(f"💪 Tu fuerza máxima estimada: {p * (1 + (0.0333 * r)):.2f}")
         except: print("⚠️ Error: Solo números.")
 
     # ==========================================================================
@@ -114,13 +132,13 @@ class SistemaClub:
             print("    SISTEMA DE ACCESO - CLUB DE FUERZA TITÁN      ")
             print("==================================================")
             print("  [1] Registrar nuevo cliente")
-            print("  [2] Calculadora 1RM")
+            print("  [2] Calculadora de fuerza (1RM)")
             print("  [3] Buscar cliente")
-            print("  [4] Ver registros")
+            print("  [4] Ver todos los registros")
             print("  [5] Eliminar cliente")
-            print("  [6] Salir del sistema")
+            print("  [6] Salir")
             
-            opcion = input("▶ Opción: ").strip()
+            opcion = input("▶ Elige una opción: ").strip()
             if opcion == '1': self.registrar_cliente()
             elif opcion == '2': self.calculadora_1rm()
             elif opcion == '3': self.buscar_cliente()
@@ -139,7 +157,7 @@ def iniciar():
         print("             CLUB DE FUERZA TITÁN                 ")
         print("                 ==== 💪 ====                     ")
         print("==================================================")
-        print("  [1] Crear cuenta de socio principal")
+        print("  [1] Iniciar sistema de gestión")
         print("  [2] Salir")
         opcion = input("▶ Opción: ").strip()
         
@@ -147,8 +165,7 @@ def iniciar():
             club.configuracion_inicial()
             club.menu()
             break
-        elif opcion == '2':
-            break
+        elif opcion == '2': break
         else: print("⚠️ Opción inválida.")
 
 if __name__ == "__main__":
