@@ -22,5 +22,6 @@ El sistema está diseñado para maximizar los ingresos del club mediante la prom
 * **Librerías:** Utiliza únicamente la librería estándar nativa (`random`), sin dependencias externas.
 
 ##
+ 
 
 
