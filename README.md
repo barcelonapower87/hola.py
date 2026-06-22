@@ -1,31 +1,36 @@
 # proyecto hola.py
-# Sistema de Acceso Interactivo - Club de Fuerza Titán 🏋️‍♂️
+# Sistema de Acceso y Gestión - Club de Fuerza Titán 🏋️‍♂️
 
-Un programa de consola (CLI) desarrollado en Python para gestionar el registro, acceso y facturación de usuarios en un club deportivo. Este sistema está diseñado con un fuerte enfoque en la **Experiencia de Usuario (UX)**, la validación estricta de datos y la persistencia de información.
+Este proyecto es un Sistema de Gestión de Usuarios y Herramienta de Entrenamiento desarrollado en Python. Está diseñado para administrar un club deportivo con niveles de seguridad, gestión de base de datos y herramientas de cálculo físico, todo operado desde la terminal (CLI).
 
 ## 📌 Características Principales
 
-* **Generación de ID Único (Nuevo):** El sistema asigna automáticamente una etiqueta de socio aleatoria de 5 dígitos a cada nuevo cliente para facilitar su identificación en la base de datos.
-* **Flujo Transaccional Seguro (Nuevo):** Al procesar un nuevo registro y finalizar la oferta comercial (VIP o Estándar), el sistema se cierra automáticamente para garantizar la seguridad de la transacción, emulando un punto de venta real.
-* **Persistencia de Datos:** Los registros exitosos se guardan automáticamente en un archivo local (`registros_club.txt`) incluyendo el ID generado, nombre, edad y tipo de pase adquirido.
-* **Menú Principal Interactivo:** Cuenta con una pantalla de inicio que permite al operador decidir si desea registrar a un nuevo cliente, consultar la base de datos de registros anteriores o salir del sistema.
-* **Validación Estricta de Entradas:** * Verifica que el nombre contenga exclusivamente letras y espacios (bloqueando campos vacíos y números).
-  * Protege la entrada de la edad contra errores de tipografía usando manejo de excepciones (`ValueError`).
-* **Lógica Comercial (Upselling):** Ofrece un pase VIP dinámico exclusivamente a los usuarios que ya cumplieron con los requisitos mínimos de edad (18+).
+* **Seguridad Multinivel:** * **Administrador:** Acceso restringido mediante PIN (1234) para operaciones críticas (Registrar, Ver base de datos, Eliminar).
+    * **Usuario Final:** Cada socio crea su propia clave personalizada al registrarse.
+* **Gestión de Base de Datos (CRUD Completo):**
+    * **Crear:** Registro nuevo con ID aleatorio de 5 dígitos.
+    * **Leer:** Visualización segura de la base de datos completa.
+    * **Buscar:** Buscador inteligente por ID para consulta rápida.
+    * **Borrar:** Función de baja de usuarios con protección administrativa.
+* **Herramientas de Entrenamiento:**
+    * **Calculadora 1RM:** Herramienta integrada para calcular el peso máximo teórico (repetición máxima) usando la fórmula de Epley.
+* **Persistencia de Datos:** Todos los registros se guardan de forma local en `registros_club.txt`.
+* **Diseño Orientado al Usuario:** Flujo de trabajo optimizado que cierra el sistema automáticamente tras transacciones de registro para garantizar la seguridad de los datos.
 
-## 🛠️ Requisitos del Sistema
+## 🛠️ Requisitos Técnicos
 
-* **Python 3.6** o superior.
-* Ejecución nativa (No requiere la instalación de bibliotecas externas, solo utiliza librerías estándar como `os` y `random`).
+* **Lenguaje:** Python 3.x
+* **Librerías:** Utiliza únicamente librerías estándar (`random`), sin dependencias externas.
+* **Entorno:** Compatible con cualquier terminal de Windows, macOS o Linux.
 
 ## 🚀 Instrucciones de Ejecución
 
-1. Asegúrate de tener Python instalado en tu equipo.
-2. Descarga el archivo principal del programa llamado `hola.py`.
-3. Abre tu terminal o línea de comandos. **Es indispensable que inicies la terminal exactamente en la misma ruta/carpeta donde guardaste `hola.py`.**
-4. Ejecuta el programa con el siguiente comando:
-
+1. Asegúrate de tener Python instalado.
+2. Descarga el archivo `hola.py`.
+3. Abre tu terminal en la carpeta donde se encuentra el archivo.
+4. Ejecuta el programa con el comando:
    ```bash
    python hola.py
+
 
 
