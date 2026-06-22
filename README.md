@@ -14,7 +14,7 @@ El sistema está diseñado para maximizar los ingresos del club mediante la prom
 * **Seguridad Dinámica:** No existen contraseñas predefinidas. La seguridad se basa en la clave que el usuario configura al arrancar el sistema, protegiendo las operaciones críticas (`1`, `4`, `5`).
 * **Gestión de Base de Datos (CRUD):** Registro, búsqueda, visualización y eliminación de socios con validación de seguridad.
 * **Calculadora 1RM:** Herramienta integrada para estimar la fuerza máxima teórica basada en la fórmula de Epley.
-* **Persistencia de Datos:** Almacenamiento local en `registros_club.txt`.
+* **Persistencia de Datos:** Almacenamiento local en `hola.txt`.
 
 ## 🛠️ Requisitos Técnicos
 * **Lenguaje:** Python 3.x
